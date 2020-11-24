@@ -5,7 +5,7 @@ import cartsModule from './modules/cart';
 
 const store = createStore({
   modules: {
-    prod: productsModule,
+    prods: productsModule,
     cart: cartsModule
   },
   state() {

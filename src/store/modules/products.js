@@ -32,7 +32,9 @@ export default {
       ]
     };
   },
-  getters(state) {
-    return state.products;
+  getters: {
+    products(state) {
+      return state.products;
+    }
   }
 };
