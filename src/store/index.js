@@ -9,7 +9,30 @@ const store = createStore({
     cart: cartsModule
   },
   state() {
-    return {};
+    return {
+      isLoggedIn: false
+    };
+  },
+  mutations: {
+    login(state) {
+      state.isLoggedIn = true;
+    },
+    logout(state) {
+      state.isLoggedIn = false;
+    }
+  },
+  actions: {
+    login(context) {
+      context.commit('login');
+    },
+    logout(context) {
+      context.commit('logout');
+    }
+  },
+  getters: {
+    isAuth(state) {
+      return state.isLoggedIn;
+    }
   }
 });
 
